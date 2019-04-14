@@ -5,30 +5,7 @@
 #include <algorithm>
 #include <iomanip>
 
-std::string to_string(const Vehicle& vehicle) {
-    std::ostringstream oss;
-    oss << vehicle.get_id() << " :  " << vehicle.get_brand();
-    return oss.str();
-}
-
-std::string to_string(std::vector<Vehicle*>::const_iterator vehicles_begin,
-                      std::vector<Vehicle*>::const_iterator vehicles_end) {
-
-    std::string s;
-    for (auto it = vehicles_begin; it != vehicles_end; ++it) {
-        const auto& vehicle = *(*it);
-        s += to_string(vehicle);
-        s += "\n";
-    }
-
-//  Wersja z użyciem biblioteki standardowej - mniej czytelna...
-//  std::string s = std::accumulate(vehicles_begin, vehicles_end, std::string(),
-//      [](std::string &s, const Vehicle* vehicle_ptr) -> std::string& {
-//    return s += to_string(*vehicle_ptr) + "\n"; });
-
-    return s;
-}
-
+   
 double compute_min_travel_duration(double distance, const Vehicle& vehicle) {
     return distance / vehicle.get_max_speed();
 }
