@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.13) zmina kogos nr 1
+cmake_minimum_required(VERSION 3.13) zmina kogos nr 11
 project(matlab_1)
-zmina 222
+zmina 2221
 set(CMAKE_CXX_STANDARD 17)
 add_compile_options(-Wall -Wextra -Werror -Wpedantic -pedantic-errors)
 
